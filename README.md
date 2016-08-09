@@ -1,5 +1,7 @@
-cscao src
+[![Build Status](https://travis-ci.org/csarron/notes.svg?branch=master)](https://travis-ci.org/csarron/notes)
 ==============
-source for https://cscao.com 
+# About
 
-These files are the main Hexo configurations.
+This is the Hexo configurations repo for site https://cscao.com/notes/
+
+
