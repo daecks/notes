@@ -40,7 +40,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
@@ -85,9 +85,9 @@ feed:
     #   TeX:
     #     equationNumbers:
     #       autoNumber: "AMS"
-html_minifier:
-  enable: false
-  exclude:
+# html_minifier:
+#   enable: false
+#   exclude:
 
 # js_minifier:
 #   enable: false

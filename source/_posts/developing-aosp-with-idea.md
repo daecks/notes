@@ -123,4 +123,3 @@ https://shuhaowu.com/blog/setting_up_intellij_with_aosp_development.html
 https://www.jetbrains.com/idea/help/increasing-memory-heap.html
 http://stackoverflow.com/questions/27690431/configure-intellij-idea-such-that-source-detected-in-git-but-unregistered-vcs-ro/29358524#29358524
 
-
