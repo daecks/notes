@@ -5,7 +5,7 @@
   <link href="/notes/atom.xml" rel="self"/>
   
   <link href="https://cscao.com/notes/"/>
-  <updated>2016-08-09T20:09:29.000Z</updated>
+  <updated>2016-08-09T22:00:53.000Z</updated>
   <id>https://cscao.com/notes/</id>
   
   <author>
@@ -19,18 +19,18 @@
     <title>Developing AOSP with IntelliJ IDEA</title>
     <link href="https://cscao.com/notes/developing-aosp-with-idea/"/>
     <id>https://cscao.com/notes/developing-aosp-with-idea/</id>
-    <published>2016-08-09T20:09:29.000Z</published>
-    <updated>2016-08-09T20:09:29.000Z</updated>
+    <published>2016-08-09T22:00:53.000Z</published>
+    <updated>2016-08-09T22:00:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I’ll give a detailed description on how to do this. Note that we need to <a href="https://source.android.com/source/requirements.html" target="_blank" rel="external">build the Android source</a> beforehand.</p>
 <a id="more"></a>
 <h2 id="IDEA-Configuration"><a href="#IDEA-Configuration" class="headerlink" title="IDEA Configuration"></a>IDEA Configuration</h2><p>We need to configure the IDEA JVM options and platform properties before importing the source code. For specific os platform, please refer to the <a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties" target="_blank" rel="external">official article</a> . </p>
 <p>For example, on macOS, the JVM options configuration file is<br><code>~/Library/Preferences/IntelliJIdea2016.2/idea.vmoptions</code>, increase the min and max memory like this (for speed up code parsing) :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># custom IntelliJ IDEA VM options</div><div class="line">-Xms1024m</div><div class="line">-Xmx4096m</div><div class="line">-XX:ReservedCodeCacheSize=240m</div><div class="line">-XX:+UseCompressedOops</div></pre></td></tr></table></figure>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># custom IntelliJ IDEA VM options</div><div class="line">-<span class="ruby">Xms1024m</span></div><div class="line">-<span class="ruby">Xmx4096m</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>ReservedCodeCacheSize=<span class="number">240</span>m</span></div><div class="line">-<span class="ruby"><span class="symbol">XX:</span>+UseCompressedOops</span></div></pre></td></tr></table></figure>
 <p>For IDEA properties, open (or create) the file <code>~/Library/Preferences/IntelliJIdea2016.2/idea.properties</code> and increase the filesize like (otherwise IDEA won’t parse the big R.java required):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># custom IntelliJ IDEA properties</div><div class="line">idea.max.intellisense.filesize=15000</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># custom IntelliJ IDEA properties</span></div><div class="line">idea.<span class="built_in">max</span>.intellisense.filesize=<span class="number">15000</span></div></pre></td></tr></table></figure>
 <h2 id="AndroidManifest-Configuration"><a href="#AndroidManifest-Configuration" class="headerlink" title="AndroidManifest Configuration"></a>AndroidManifest Configuration</h2><p>If we want to debug the framework as app, we need to create an <code>AndroidManifest.xml</code> under the source code root directory and write the content:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line">  &lt;uses-sdk android:minSdkVersion=&quot;23&quot; /&gt;</div><div class="line">&lt;/manifest&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">"23"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Now open IDEA and configure the platform settings for AOSP project.<br><img src="media/IDEA-project-configure.png" alt="IDEA-project-configure"></p>
 <h2 id="Platform-Settings"><a href="#Platform-Settings" class="headerlink" title="Platform Settings"></a>Platform Settings</h2><h3 id="SDKs"><a href="#SDKs" class="headerlink" title="SDKs"></a>SDKs</h3><ol>
 <li>Configure jdk1.7 without library(remove all jars in Classpath) — name as jdk7_nolib<br><img src="media/IDEA-project-jdk.png" alt="IDEA-project-jdk"></li>
@@ -111,15 +111,15 @@ tools
     <title>Hello World</title>
     <link href="https://cscao.com/notes/hello-world/"/>
     <id>https://cscao.com/notes/hello-world/</id>
-    <published>2016-08-09T20:09:29.000Z</published>
-    <updated>2016-08-09T20:09:29.000Z</updated>
+    <published>2016-08-09T22:00:53.000Z</published>
+    <updated>2016-08-09T22:00:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hello <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>!</p>
 <p>I’m back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I’m not ready, I’m just curious for the web things. This time, I’ll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.</p>
 <p>This first post is mainly for testing various features.</p>
 <a id="more"></a>
 <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>This part is about some simple usage of Markdown grammar. i.e.</p>
-<h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div><div class="line">#### H4</div><div class="line">##### H5</div><div class="line">###### H6</div></pre></td></tr></table></figure>
+<h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># H1</span></div><div class="line"><span class="meta">## H2</span></div><div class="line"><span class="meta">### H3</span></div><div class="line"><span class="meta">#### H4</span></div><div class="line"><span class="meta">##### H5</span></div><div class="line"><span class="meta">###### H6</span></div></pre></td></tr></table></figure>
 <p><strong>bold, strong</strong></p>
 <p><em>italic, emphasis</em></p>
 <p><strong><em>bold and italic</em></strong></p>
@@ -134,7 +134,7 @@ tools
 </ul>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">**bold, strong**</div><div class="line"></div><div class="line">*italic, emphasis*</div><div class="line"></div><div class="line">***bold and italic***</div><div class="line"></div><div class="line">~~Delete~~</div><div class="line"></div><div class="line">1. one</div><div class="line">2. two</div><div class="line">3. three</div><div class="line"> - subone</div><div class="line"> - subtwo</div></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">**<span class="keyword">bold, </span><span class="keyword">strong**</span></div><div class="line"></div><div class="line">*<span class="keyword">italic, </span>emphasis*</div><div class="line"></div><div class="line">***<span class="keyword">bold </span><span class="keyword">and </span><span class="keyword">italic***</span></div><div class="line"></div><div class="line">~~Delete~~</div><div class="line"></div><div class="line"><span class="number">1</span>. one</div><div class="line"><span class="number">2</span>. two</div><div class="line"><span class="number">3</span>. three</div><div class="line"> - <span class="keyword">subone</span></div><div class="line"> - <span class="keyword">subtwo</span></div></pre></td></tr></table></figure>
 <h2 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h2><p>basic footnote<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br>here is an inline footnote<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>and another one<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup><br>and another one<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></p>
 <h2 id="Equations"><a href="#Equations" class="headerlink" title="Equations"></a>Equations</h2><p>Simple inline: $a^2 = b^2 + \frac{d}{\sqrt{c}}$.</p>
 <p>Display</p>
