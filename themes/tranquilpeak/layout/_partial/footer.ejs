@@ -1,0 +1,16 @@
+<footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        <!-- added by Arron Cao -->
+        <% var updateTime = date(Date.now(), "H:mm on YYYY-MM-DD ");
+           var year=' ';
+           thisYear= date(new Date(), 'YYYY');
+            if(theme.since < thisYear){
+                yearTitle = theme.since + ' - ' + thisYear;
+            }else{
+                yearTitle = thisYear;
+            }
+        %>
+        Copyrights &copy; <%= yearTitle +  ' ' + config.author || config.title %>.  All Rights Reserved.<br />
+        Last updated at <%= updateTime %> EST. Powered by <a href="https://hexo.io" target="_blank">Hexo</a>. Theme by <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/" target="_blank">Tranquilpeak</a>.
+    </span>
+</footer>
