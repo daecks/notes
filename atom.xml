@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cscao.com/notes/"/>
-  <updated>2016-08-10T00:10:59.000Z</updated>
+  <updated>2016-08-10T03:13:17.000Z</updated>
   <id>https://cscao.com/notes/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Developing AOSP with IntelliJ IDEA</title>
     <link href="https://cscao.com/notes/developing-aosp-with-idea/"/>
     <id>https://cscao.com/notes/developing-aosp-with-idea/</id>
-    <published>2016-08-10T00:10:59.000Z</published>
-    <updated>2016-08-10T00:10:59.000Z</updated>
+    <published>2016-08-10T03:13:17.000Z</published>
+    <updated>2016-08-10T03:13:17.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I’ll give a detailed description on how to do this. Note that we need to <a href="https://source.android.com/source/requirements.html" target="_blank" rel="external">build the Android source</a> beforehand.</p>
 <a id="more"></a>
@@ -111,8 +111,8 @@ tools
     <title>Hello World</title>
     <link href="https://cscao.com/notes/hello-world/"/>
     <id>https://cscao.com/notes/hello-world/</id>
-    <published>2016-08-10T00:10:59.000Z</published>
-    <updated>2016-08-10T00:10:59.000Z</updated>
+    <published>2016-08-10T03:13:17.000Z</published>
+    <updated>2016-08-10T03:13:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hello <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>!</p>
 <p>I’m back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I’m not ready, I’m just curious for the web things. This time, I’ll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.</p>
@@ -136,27 +136,11 @@ tools
 </ol>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">**<span class="keyword">bold, </span><span class="keyword">strong**</span></div><div class="line"></div><div class="line">*<span class="keyword">italic, </span>emphasis*</div><div class="line"></div><div class="line">***<span class="keyword">bold </span><span class="keyword">and </span><span class="keyword">italic***</span></div><div class="line"></div><div class="line">~~Delete~~</div><div class="line"></div><div class="line"><span class="number">1</span>. one</div><div class="line"><span class="number">2</span>. two</div><div class="line"><span class="number">3</span>. three</div><div class="line"> - <span class="keyword">subone</span></div><div class="line"> - <span class="keyword">subtwo</span></div></pre></td></tr></table></figure>
 <h2 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h2><p>basic footnote<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br>here is an inline footnote<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>and another one<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup><br>and another one<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></p>
-<h2 id="Equations"><a href="#Equations" class="headerlink" title="Equations"></a>Equations</h2><p>Simple inline: $a^2 = b^2 + \frac{d}{\sqrt{c}}$.</p>
-<p>Display</p>
+<h2 id="Equations"><a href="#Equations" class="headerlink" title="Equations"></a>Equations</h2><p>Simple inline: $a^2 = b^2 + \frac{d}{\sqrt{c}}$.<br>This is an example for $x_mu$ and $y_mu$.<br>Display</p>
 <p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)<br>$$</p>
-<p>Aligning equations<br><span>$$\begin{aligned}
-\dot{x} &amp; = \sigma(y-x) \\
-\dot{y} &amp; = \rho x - y - xz \\
-\dot{z} &amp; = -\beta z + xy
-\end{aligned}$$</span><!-- Has MathJax --></p>
-<p>Equations with numbering<br><span>$$\begin{equation}\label{2.1}
-\begin{split}
-a =&amp; b+c-d\\
-   &amp; {}+e-f\\
-  =&amp; g+h\\ 
-  =&amp; i
-\end{split}
-\end{equation}$$</span><!-- Has MathJax --></p>
-<p>Equations with cases<br><span>$$f(n) =
-\begin{cases}
-\frac{n}{2},  &amp; \text{if $n$ is even} \\
-3n+1, &amp; \text{if $n$ is odd}
-\end{cases}$$</span><!-- Has MathJax --></p>
+<p>Aligning equations<br>$$<br>\begin{aligned}<br>\dot{x} &amp; = \sigma(y-x) \\<br>\dot{y} &amp; = \rho x - y - xz \\<br>\dot{z} &amp; = -\beta z + xy<br>\end{aligned}<br>$$</p>
+<p>Equations with numbering<br>$$<br>\begin{equation}\label{2.1}<br>\begin{split}<br>a =&amp; b+c-d \\<br>   &amp; {}+e-f \\<br>  =&amp; g+h \\<br>  =&amp; i<br>\end{split}<br>\end{equation}<br>$$</p>
+<p>Equations with cases<br>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
 <h2 id="Blocks"><a href="#Blocks" class="headerlink" title="Blocks"></a>Blocks</h2><div class="alert info"><p>Here is a info alert</p>
 </div>
 <div class="alert success"><p>Here is a success alert</p>
