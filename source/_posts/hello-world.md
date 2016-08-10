@@ -7,6 +7,7 @@ tags:
 - Hexo
 - markdown
 - html
+mathjax: true
 ---
 Hello [Hexo](https://hexo.io/)!
 
@@ -85,7 +86,7 @@ content
 
 
 Simple inline: $a^2 = b^2 + \frac{d}{\sqrt{c}}$.
-
+This is an example for $x_mu$ and $y_mu$.
 Display
 
 $$\frac{\partial u}{\partial t}
@@ -95,35 +96,35 @@ $$\frac{\partial u}{\partial t}
 $$
 
 Aligning equations
-{% math %}
+$$
 \begin{aligned}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
+\dot{x} & = \sigma(y-x) \\\
+\dot{y} & = \rho x - y - xz \\\
 \dot{z} & = -\beta z + xy
 \end{aligned}
-{% endmath %}
+$$
 
 
 Equations with numbering
-{% math %}
+$$
 \begin{equation}\label{2.1}
 \begin{split}
-a =& b+c-d\\
-   & {}+e-f\\
-  =& g+h\\ 
+a =& b+c-d \\\
+   & {}+e-f \\\
+  =& g+h \\\
   =& i
 \end{split}
 \end{equation}
-{% endmath %}
+$$
 
 Equations with cases
-{% math %}
+$$
 f(n) =
 \begin{cases}
-\frac{n}{2},  & \text{if $n$ is even} \\
+\frac{n}{2},  & \text{if $n$ is even} \\\
 3n+1, & \text{if $n$ is odd}
 \end{cases}
-{% endmath %}
+$$
 
 ## Blocks
 {% alert info %}
