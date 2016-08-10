@@ -80,8 +80,7 @@ tools
       <url>https://cscao.com/notes/hello-world/</url>
       <content type="html"><![CDATA[<p>Hello <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>!</p>
 <p>I’m back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I’m not ready, I’m just curious for the web things. This time, I’ll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.</p>
-<p>This first post is mainly for testing various features.</p>
-<a id="more"></a>
+<p>This first post is mainly for testing various features.<br><a id="more"></a></p>
 <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>This part is about some simple usage of Markdown grammar. i.e.</p>
 <h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># H1</span></div><div class="line"><span class="meta">## H2</span></div><div class="line"><span class="meta">### H3</span></div><div class="line"><span class="meta">#### H4</span></div><div class="line"><span class="meta">##### H5</span></div><div class="line"><span class="meta">###### H6</span></div></pre></td></tr></table></figure>
 <p><strong>bold, strong</strong></p>
