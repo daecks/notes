@@ -15,17 +15,17 @@
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># custom IntelliJ IDEA properties</span></div><div class="line">idea.<span class="built_in">max</span>.intellisense.filesize=<span class="number">15000</span></div></pre></td></tr></table></figure>
 <h2 id="AndroidManifest-Configuration"><a href="#AndroidManifest-Configuration" class="headerlink" title="AndroidManifest Configuration"></a>AndroidManifest Configuration</h2><p>If we want to debug the framework as app, we need to create an <code>AndroidManifest.xml</code> under the source code root directory and write the content:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">"23"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Now open IDEA and configure the platform settings for AOSP project.<br><img src="/media/IDEA-project-configure.png" alt="IDEA-project-configure"></p>
+<p>Now open IDEA and configure the platform settings for AOSP project.<br><img src="../media/IDEA-project-configure.png" alt="IDEA-project-configure"></p>
 <h2 id="Platform-Settings"><a href="#Platform-Settings" class="headerlink" title="Platform Settings"></a>Platform Settings</h2><h3 id="SDKs"><a href="#SDKs" class="headerlink" title="SDKs"></a>SDKs</h3><ol>
-<li>Configure jdk1.7 without library(remove all jars in Classpath) — name as jdk7_nolib<br><img src="/media/IDEA-project-jdk.png" alt="IDEA-project-jdk"></li>
+<li>Configure jdk1.7 without library(remove all jars in Classpath) — name as jdk7_nolib<br><img src="../media/IDEA-project-jdk.png" alt="IDEA-project-jdk"></li>
 </ol>
 <ol>
-<li>Add Android SDK Build target as Android 6.0 — name as Android_23_jdk7_nolib<br>(select above pre configured no lib jdk1.7 as Java SDK)<br><img src="/media/IDEA-project-android-sdk.png" alt="IDEA-project-android-sdk"></li>
+<li>Add Android SDK Build target as Android 6.0 — name as Android_23_jdk7_nolib<br>(select above pre configured no lib jdk1.7 as Java SDK)<br><img src="../media/IDEA-project-android-sdk.png" alt="IDEA-project-android-sdk"></li>
 </ol>
 <h3 id="Project-Settings"><a href="#Project-Settings" class="headerlink" title="Project Settings"></a>Project Settings</h3><ol>
 <li>Project<ul>
 <li>select above configured Android SDK (Android_23_jdk7_nolib)</li>
-<li>Project language level -&gt; 7 - Diamonds…<br><img src="/media/IDEA-project-project-sdk.png" alt="IDEA-project-project-sdk"></li>
+<li>Project language level -&gt; 7 - Diamonds…<br><img src="../media/IDEA-project-project-sdk.png" alt="IDEA-project-project-sdk"></li>
 </ul>
 </li>
 </ol>
@@ -59,13 +59,13 @@ toolchain
 tools
 </code></pre></li>
 <li>After that, type <code>development/tools/idegen/idegen.sh</code>, this will generate Android.iml and Android.ipr files in the source root dir.</li>
-<li>Now you can open the Android.ipr through IDEA. After the indexing finishes, we need to configure the rest parts. Open Project Structure:<br><img src="/media/IDEA-project-open-structure.png" alt="IDEA-project-open-structure"></li>
+<li>Now you can open the Android.ipr through IDEA. After the indexing finishes, we need to configure the rest parts. Open Project Structure:<br><img src="../media/IDEA-project-open-structure.png" alt="IDEA-project-open-structure"></li>
 </ol>
 <p>Under Modules Tab, add Android framework (or just confirm when IDEA pops up a configure Android framework hint).</p>
 <ol>
-<li><p>In Source Tab, mark out/target/common/R as sources folder<br><img src="/media/IDEA-mark-R-as-source.png" alt="IDEA-mark-R-as-source"></p>
+<li><p>In Source Tab, mark out/target/common/R as sources folder<br><img src="../media/IDEA-mark-R-as-source.png" alt="IDEA-mark-R-as-source"></p>
 </li>
-<li><p>In Dependencies Tab, remove all module dependencies except two <code>Module source</code> and <code>Project SDK (Android_23_jdk7_nolib)</code><br><img src="/media/IDEA-remove-module-dependencies.png" alt="IDEA-remove-module-dependencies"></p>
+<li><p>In Dependencies Tab, remove all module dependencies except two <code>Module source</code> and <code>Project SDK (Android_23_jdk7_nolib)</code><br><img src="../media/IDEA-remove-module-dependencies.png" alt="IDEA-remove-module-dependencies"></p>
 </li>
 <li><p>(Optional but recommended) For Unregistered VCS root detected info:<br>Go Preferences-&gt;Version Control-&gt;add root and apply</p>
 </li>
