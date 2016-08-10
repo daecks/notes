@@ -8,13 +8,14 @@ tags:
 - markdown
 - html
 mathjax: true
+date: 2016-07-06
+readingtime: 5
 ---
 Hello [Hexo](https://hexo.io/)!
 
 I'm back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I'm not ready, I'm just curious for the web things. This time, I'll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.
 
 This first post is mainly for testing various features.
-
 <!-- more -->
 
 ## Basics

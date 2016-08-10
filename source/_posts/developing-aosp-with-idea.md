@@ -6,6 +6,9 @@ tags:
 - AOSP
 - IDEA
 - Android
+date: 2016-08-08
+updated: 2016-08-10
+readingtime: 15
 ---
 ## Introduction
 
