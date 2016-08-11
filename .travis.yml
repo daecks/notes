@@ -29,7 +29,11 @@ after_success:
 - mkdir .deploy
 - cd .deploy
 - git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init && git remote add -t gh-pages origin $DEPLOY_REPO)
+#### get last msg from master branch
+- git checkout master
 - msg=`git log --pretty=format:"%s" | head -n1`
+- git checkout gh-pages
+####
 - rm -rf ./*
 - cp -r ../public/* .
 - mv 404/index.html 404.html
