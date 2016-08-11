@@ -31,6 +31,8 @@ after_success:
 - git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init && git remote add -t gh-pages origin $DEPLOY_REPO)
 - rm -rf ./*
 - cp -r ../public/* .
+- mv 404/index.html 404.html
+- rm -r 404
 - git add -A .
 - git commit -m 'Site updated'
 - git branch -m gh-pages
