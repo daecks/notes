@@ -11,9 +11,23 @@
         <%- partial('category', {categories: post.categories})%>
     <% } %>
     <% if (post.updated) { %>
+        <time itemprop="dateModified" datetime="<%= date_xml(post.updated) %>">
         <span style="float: right">
         <%= __('post.updated_on')  %>
         <%= post.updated.locale(post.lang).format(__('date_format')) %>
         </span>
-    <% } %>    
+        </time>
+    <% } %>
+    <span itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+        <meta content='<%= config.author %>' itemprop='name'/>
+    </span>
+    <span itemprop='publisher' itemscope='itemscope' itemtype='http://schema.org/Organization'>
+        <meta content='<%= theme.sidebar.author_links.linked_in.url %>' itemprop='url'/>
+        <meta content='<%= config.author %>' itemprop='name'/>
+        <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="<%= resolve_asset_url(theme.image_dir, theme.author.picture) %>" />
+            <meta itemprop="height" content="512"/>
+            <meta itemprop="width" content="512"/>
+        </span>
+    </span>
 </div>

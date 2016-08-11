@@ -9,6 +9,7 @@ tags:
 - html
 mathjax: true
 date: 2016-07-06
+updated: 2016-08-09
 readingtime: 5
 ---
 Hello [Hexo](https://hexo.io/)!

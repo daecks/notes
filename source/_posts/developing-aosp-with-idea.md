@@ -48,26 +48,26 @@ If we want to debug the framework as app, we need to create an `AndroidManifest.
 ```
 
 Now open IDEA and configure the platform settings for AOSP project.
-![IDEA-project-configure](../media/IDEA-project-configure.png)
+![IDEA-project-configure](/media/IDEA-project-configure.png)
 
 
 ## Platform Settings
 
 ### SDKs
   1. Configure jdk1.7 without library(remove all jars in Classpath) --- name as jdk7_nolib
-![IDEA-project-jdk](../media/IDEA-project-jdk.png)
+![IDEA-project-jdk](/media/IDEA-project-jdk.png)
 
   
   2. Add Android SDK Build target as Android 6.0 --- name as Android_23_jdk7_nolib
   (select above pre configured no lib jdk1.7 as Java SDK)
-  ![IDEA-project-android-sdk](../media/IDEA-project-android-sdk.png)
+  ![IDEA-project-android-sdk](/media/IDEA-project-android-sdk.png)
 
 
 ### Project Settings
 1. Project
   - select above configured Android SDK (Android_23_jdk7_nolib)
   - Project language level -> 7 - Diamonds...
-![IDEA-project-project-sdk](../media/IDEA-project-project-sdk.png)
+![IDEA-project-project-sdk](/media/IDEA-project-project-sdk.png)
 
 ### Prepare Source Code
 1. Under AOSP source root dir, execute command `mmm development/tools/idegen`, this will generate necessary IDE files. 
@@ -102,15 +102,15 @@ tools
 ``` 
 3. After that, type `development/tools/idegen/idegen.sh`, this will generate Android.iml and Android.ipr files in the source root dir.
 4. Now you can open the Android.ipr through IDEA. After the indexing finishes, we need to configure the rest parts. Open Project Structure:
-![IDEA-project-open-structure](../media/IDEA-project-open-structure.png)
+![IDEA-project-open-structure](/media/IDEA-project-open-structure.png)
 
 Under Modules Tab, add Android framework (or just confirm when IDEA pops up a configure Android framework hint).
 
 5. In Source Tab, mark out/target/common/R as sources folder 
-   ![IDEA-mark-R-as-source](../media/IDEA-mark-R-as-source.png)
+   ![IDEA-mark-R-as-source](/media/IDEA-mark-R-as-source.png)
 
 6. In Dependencies Tab, remove all module dependencies except two `Module source` and `Project SDK (Android_23_jdk7_nolib)`
-![IDEA-remove-module-dependencies](../media/IDEA-remove-module-dependencies.png)
+![IDEA-remove-module-dependencies](/media/IDEA-remove-module-dependencies.png)
 
 7. (Optional but recommended) For Unregistered VCS root detected info:
  Go Preferences->Version Control->add root and apply
