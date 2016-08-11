@@ -29,11 +29,13 @@ after_success:
 - mkdir .deploy
 - cd .deploy
 - git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init && git remote add -t gh-pages origin $DEPLOY_REPO)
+- msg=`git log --pretty=format:"%s" | head -n1`
 - rm -rf ./*
 - cp -r ../public/* .
 - mv 404/index.html 404.html
 - rm -r 404
 - git add -A .
-- git commit -m 'Site updated'
+- t=`date +"%Y-%m-%d-%H-%M-%S"`
+- git commit -m '$msg, updated on $t'
 - git branch -m gh-pages
 - git push -q -u origin gh-pages
