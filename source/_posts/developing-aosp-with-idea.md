@@ -10,7 +10,6 @@ date: 2016-08-08
 updated: 2016-08-10
 readingtime: 15
 ---
-## Introduction
 
 Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I'll give a detailed description on how to do this. Note that we need to [build the Android source](https://source.android.com/source/requirements.html) beforehand.
 

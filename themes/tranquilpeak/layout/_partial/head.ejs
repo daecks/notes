@@ -71,7 +71,8 @@
     })();
 %>
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="<%= config.title %>">
     <title><%= title %></title>
@@ -90,9 +91,6 @@
         twitter_id: theme.author.twitter,
         fb_app_id: theme.fb_app_id
     }) %>
-    <% if (theme.author.google_plus) { %>
-        <meta rel="publisher" content="https://plus.google.com/<%= theme.author.google_plus %>"/>
-    <% } %>
     <% if (typeof fb_admin_ids !== 'undefined') { %>
         <% fb_admin_ids.forEach(function(fb_admin_id) { %>
             <meta property="fb:admins" content="<%= fb_admin_id %>" />
@@ -118,7 +116,7 @@
         <% }) %>
     <% } %>
     <!--STYLES-->
-    <%- css('assets/css/style-ejlztp1tasruqfvoz6xmgqng0anzae8ox7cqjj5yibieqgcmhe9fwxfae6zj.min.css') %>
+    <%- css('assets/css/styles.min.css') %>
     <!--STYLES END-->
     <%- partial('google-analytics') %>
     <%- partial('baidu-analytics') %>

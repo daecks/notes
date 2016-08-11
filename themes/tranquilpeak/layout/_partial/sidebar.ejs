@@ -13,7 +13,7 @@
     <% if (authorPicture) { %>
         <div class="sidebar-profile">
             <a href="<%- url_for('/#about') %>">
-                    <img class="sidebar-profile-picture" src="<%= authorPicture %>"/>
+                    <img class="sidebar-profile-picture" src="<%= authorPicture %>" alt="gravatar"/>
             </a>
             <span class="sidebar-profile-name"><%= config.author %></span>
         </div>

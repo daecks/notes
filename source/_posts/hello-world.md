@@ -73,14 +73,11 @@ list:
 ## Footnotes
 
 basic footnote[^1]
-here is an inline footnote[^2](inline footnote)
-and another one[^3]
+and another one[^sample]
 and another one[^4]
 
 [^1]: basic footnote content
-[^3]: paragraph
-footnote
-content
+[^sample]: paragraph
 [^4]: footnote content with some [markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## Equations
