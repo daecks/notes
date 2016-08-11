@@ -36,6 +36,7 @@ after_success:
 - rm -r 404
 - git add -A .
 - t=`date +"%Y-%m-%d-%H-%M-%S"`
-- git commit -m '$msg, updated on $t'
+- echo $msg, updated on $t
+- git commit -m "$msg, updated on $t"
 - git branch -m gh-pages
 - git push -q -u origin gh-pages
