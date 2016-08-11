@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Developing AOSP with IntelliJ IDEA]]></title>
-      <url>https://cscao.com/notes/developing-aosp-with-idea/</url>
+      <url>https://notes.cscao.com/developing-aosp-with-idea/</url>
       <content type="html"><![CDATA[<p>Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I’ll give a detailed description on how to do this. Note that we need to <a href="https://source.android.com/source/requirements.html" target="_blank" rel="external">build the Android source</a> beforehand.</p>
 <a id="more"></a>
 <h2 id="IDEA-Configuration"><a href="#IDEA-Configuration" class="headerlink" title="IDEA Configuration"></a>IDEA Configuration</h2><p>We need to configure the IDEA JVM options and platform properties before importing the source code. For specific os platform, please refer to the <a href="https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties" target="_blank" rel="external">official article</a> . </p>
@@ -15,17 +15,17 @@
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># custom IntelliJ IDEA properties</span></div><div class="line">idea.<span class="built_in">max</span>.intellisense.filesize=<span class="number">15000</span></div></pre></td></tr></table></figure>
 <h2 id="AndroidManifest-Configuration"><a href="#AndroidManifest-Configuration" class="headerlink" title="AndroidManifest Configuration"></a>AndroidManifest Configuration</h2><p>If we want to debug the framework as app, we need to create an <code>AndroidManifest.xml</code> under the source code root directory and write the content:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">"23"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Now open IDEA and configure the platform settings for AOSP project.<br><img src="../media/IDEA-project-configure.png" alt="IDEA-project-configure"></p>
+<p>Now open IDEA and configure the platform settings for AOSP project.<br><img src="/media/IDEA-project-configure.png" alt="IDEA-project-configure"></p>
 <h2 id="Platform-Settings"><a href="#Platform-Settings" class="headerlink" title="Platform Settings"></a>Platform Settings</h2><h3 id="SDKs"><a href="#SDKs" class="headerlink" title="SDKs"></a>SDKs</h3><ol>
-<li>Configure jdk1.7 without library(remove all jars in Classpath) — name as jdk7_nolib<br><img src="../media/IDEA-project-jdk.png" alt="IDEA-project-jdk"></li>
+<li>Configure jdk1.7 without library(remove all jars in Classpath) — name as jdk7_nolib<br><img src="/media/IDEA-project-jdk.png" alt="IDEA-project-jdk"></li>
 </ol>
 <ol>
-<li>Add Android SDK Build target as Android 6.0 — name as Android_23_jdk7_nolib<br>(select above pre configured no lib jdk1.7 as Java SDK)<br><img src="../media/IDEA-project-android-sdk.png" alt="IDEA-project-android-sdk"></li>
+<li>Add Android SDK Build target as Android 6.0 — name as Android_23_jdk7_nolib<br>(select above pre configured no lib jdk1.7 as Java SDK)<br><img src="/media/IDEA-project-android-sdk.png" alt="IDEA-project-android-sdk"></li>
 </ol>
 <h3 id="Project-Settings"><a href="#Project-Settings" class="headerlink" title="Project Settings"></a>Project Settings</h3><ol>
 <li>Project<ul>
 <li>select above configured Android SDK (Android_23_jdk7_nolib)</li>
-<li>Project language level -&gt; 7 - Diamonds…<br><img src="../media/IDEA-project-project-sdk.png" alt="IDEA-project-project-sdk"></li>
+<li>Project language level -&gt; 7 - Diamonds…<br><img src="/media/IDEA-project-project-sdk.png" alt="IDEA-project-project-sdk"></li>
 </ul>
 </li>
 </ol>
@@ -59,13 +59,13 @@ toolchain
 tools
 </code></pre></li>
 <li>After that, type <code>development/tools/idegen/idegen.sh</code>, this will generate Android.iml and Android.ipr files in the source root dir.</li>
-<li>Now you can open the Android.ipr through IDEA. After the indexing finishes, we need to configure the rest parts. Open Project Structure:<br><img src="../media/IDEA-project-open-structure.png" alt="IDEA-project-open-structure"></li>
+<li>Now you can open the Android.ipr through IDEA. After the indexing finishes, we need to configure the rest parts. Open Project Structure:<br><img src="/media/IDEA-project-open-structure.png" alt="IDEA-project-open-structure"></li>
 </ol>
 <p>Under Modules Tab, add Android framework (or just confirm when IDEA pops up a configure Android framework hint).</p>
 <ol>
-<li><p>In Source Tab, mark out/target/common/R as sources folder<br><img src="../media/IDEA-mark-R-as-source.png" alt="IDEA-mark-R-as-source"></p>
+<li><p>In Source Tab, mark out/target/common/R as sources folder<br><img src="/media/IDEA-mark-R-as-source.png" alt="IDEA-mark-R-as-source"></p>
 </li>
-<li><p>In Dependencies Tab, remove all module dependencies except two <code>Module source</code> and <code>Project SDK (Android_23_jdk7_nolib)</code><br><img src="../media/IDEA-remove-module-dependencies.png" alt="IDEA-remove-module-dependencies"></p>
+<li><p>In Dependencies Tab, remove all module dependencies except two <code>Module source</code> and <code>Project SDK (Android_23_jdk7_nolib)</code><br><img src="/media/IDEA-remove-module-dependencies.png" alt="IDEA-remove-module-dependencies"></p>
 </li>
 <li><p>(Optional but recommended) For Unregistered VCS root detected info:<br>Go Preferences-&gt;Version Control-&gt;add root and apply</p>
 </li>
@@ -77,7 +77,7 @@ tools
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>https://cscao.com/notes/hello-world/</url>
+      <url>https://notes.cscao.com/hello-world/</url>
       <content type="html"><![CDATA[<p>Hello <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>!</p>
 <p>I’m back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I’m not ready, I’m just curious for the web things. This time, I’ll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.</p>
 <p>This first post is mainly for testing various features.<br><a id="more"></a></p>
@@ -136,31 +136,31 @@ tools
     
     <entry>
       <title><![CDATA[Page not found 404]]></title>
-      <url>https://cscao.com/notes/404/index.html</url>
+      <url>https://notes.cscao.com/404/index.html</url>
       <content type="html"><![CDATA[<h1 id="This-page-doesn’t-exist"><a href="#This-page-doesn’t-exist" class="headerlink" title="This page doesn’t exist !"></a>This page doesn’t exist !</h1>]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[all-archives]]></title>
-      <url>https://cscao.com/notes/all-archives/index.html</url>
+      <url>https://notes.cscao.com/all-archives/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
       <title><![CDATA[all-categories]]></title>
-      <url>https://cscao.com/notes/all-categories/index.html</url>
+      <url>https://notes.cscao.com/all-categories/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
       <title><![CDATA[all-tags]]></title>
-      <url>https://cscao.com/notes/all-tags/index.html</url>
+      <url>https://notes.cscao.com/all-tags/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
       <title><![CDATA[Search]]></title>
-      <url>https://cscao.com/notes/search/index.html</url>
+      <url>https://notes.cscao.com/search/index.html</url>
       <content type="html"></content>
     </entry>
     
