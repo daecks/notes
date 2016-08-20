@@ -7,7 +7,7 @@ tags:
 - IDEA
 - Android
 date: 2016-08-08
-updated: 2016-08-10
+updated: 2016-08-16
 readingtime: 15
 ---
 
@@ -36,7 +36,7 @@ For IDEA properties, open (or create) the file `~/Library/Preferences/IntelliJId
 idea.max.intellisense.filesize=15000
 ```
 
-## AndroidManifest Configuration
+## AndroidManifest Configuration (optional)
 
 If we want to debug the framework as app, we need to create an `AndroidManifest.xml` under the source code root directory and write the content:
 
@@ -115,11 +115,16 @@ Under Modules Tab, add Android framework (or just confirm when IDEA pops up a co
 7. (Optional but recommended) For Unregistered VCS root detected info:
  Go Preferences->Version Control->add root and apply
 
+Update: in fact we can remove the Android API Platform after the source is imported and maybe it's necessary since we only need to no-lib JDK and android compiled dependencies.
+
+Another tip is that if we find errors indicating the classes missing, we'll need to mark the some folders as source appropriately just as what we do in step 5. 
+
+Sometimes even we update the source folder, there are still errors. In that case, it's not our fault, we need to change the package name if necessary or just ignore that. For example, when I looked at the `ActivityThread.java`, the class `TrustedCertificateStore` is wrongly packaged, we need to change it `org.conscrypt` temporarily (or you can manually correct which is a lot of effort). Actually the problem is that the person did not use IDE to write those Java codes, and this kind of package name things are later corrected through jarjar-rules (as can be seen both in Android.mk and jarjar-rules.txt files).
+
 Now enjoy developing the Android source code!
 
 ## References  
 https://android.googlesource.com/platform/development/+/master/tools/idegen/README
-http://www.cnblogs.com/Lefter/p/4176991.html
 https://github.com/android/platform_development/blob/master/tools/idegen/excluded-paths
 https://shuhaowu.com/blog/setting_up_intellij_with_aosp_development.html
 https://www.jetbrains.com/idea/help/increasing-memory-heap.html
