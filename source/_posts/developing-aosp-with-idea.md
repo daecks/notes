@@ -34,6 +34,7 @@ For IDEA properties, open (or create) the file `~/Library/Preferences/IntelliJId
 ```
 # custom IntelliJ IDEA properties
 idea.max.intellisense.filesize=15000
+idea.case.sensitive.fs=true
 ```
 
 ## AndroidManifest Configuration (optional)
