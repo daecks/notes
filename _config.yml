@@ -72,32 +72,6 @@ feed:
   limit: 20
   hub:
 
-## MathJax customize configuration
-# math:
-#   engine: 'mathjax'
-#   mathjax:
-#     src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-#     config:
-    #   tex2jax:
-    #     inlineMath: [ ['$','$']]
-    #     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    #     processEscapes: false
-    #   TeX:
-    #     equationNumbers:
-    #       autoNumber: "AMS"
-# html_minifier:
-#   enable: false
-#   exclude:
-
-# js_minifier:
-#   enable: false
-#   mangle: true
-#   output:
-#   compress:
-#   exclude:
-#     - assets/js/search.js
-
-
 search:
   path: search.xml
   field: all

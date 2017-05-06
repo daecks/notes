@@ -163,7 +163,6 @@ archive_pagination: true
 category_pagination: true
 tag_pagination: true
 
-
 # Integrated services
 # You can't use Disqus and Duoshuo together
 # then fill the right shortname

@@ -10,6 +10,9 @@
      searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
 <!--SCRIPTS END-->
+<% if (page.mathjax){ %>
+<%- partial('mathjax') %>
+<% } %>
 <% if (post.comments) { %>
     <% if (theme.disqus_shortname) { %>
         <script>
