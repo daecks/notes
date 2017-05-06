@@ -76,6 +76,24 @@ tools
 <p>Now enjoy developing the Android source code!</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://android.googlesource.com/platform/development/+/master/tools/idegen/README" target="_blank" rel="external">https://android.googlesource.com/platform/development/+/master/tools/idegen/README</a><br><a href="https://github.com/android/platform_development/blob/master/tools/idegen/excluded-paths" target="_blank" rel="external">https://github.com/android/platform_development/blob/master/tools/idegen/excluded-paths</a><br><a href="https://shuhaowu.com/blog/setting_up_intellij_with_aosp_development.html" target="_blank" rel="external">https://shuhaowu.com/blog/setting_up_intellij_with_aosp_development.html</a><br><a href="https://www.jetbrains.com/idea/help/increasing-memory-heap.html" target="_blank" rel="external">https://www.jetbrains.com/idea/help/increasing-memory-heap.html</a><br><a href="http://stackoverflow.com/questions/27690431/configure-intellij-idea-such-that-source-detected-in-git-but-unregistered-vcs-ro/29358524#29358524" target="_blank" rel="external">http://stackoverflow.com/questions/27690431/configure-intellij-idea-such-that-source-detected-in-git-but-unregistered-vcs-ro/29358524#29358524</a></p>
 ]]></content>
+      
+        <categories>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AOSP </tag>
+            
+            <tag> IDEA </tag>
+            
+            <tag> Android </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -132,6 +150,26 @@ tools
 <figure class="highlight java"><figcaption><span>Java example</span><a href="https://highlightjs.org/" target="_blank" rel="external">Source</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * <span class="doctag">@author</span> John Smith &lt;john.smith@example.com&gt;</div><div class="line">*/</div><div class="line"><span class="keyword">package</span> l2f.gameserver.model;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">L2Char</span> <span class="keyword">extends</span> <span class="title">L2Object</span> </span>&#123;</div><div class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Short ERROR = <span class="number">0x0001</span>;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moveTo</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</div><div class="line">    _ai = <span class="keyword">null</span>;</div><div class="line">    log(<span class="string">"Should not be called"</span>);</div><div class="line">    <span class="keyword">if</span> (<span class="number">1</span> &gt; <span class="number">5</span>) &#123; <span class="comment">// wtf!?</span></div><div class="line">      <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
 <figure class="highlight python"><figcaption><span>Python example</span><a href="https://highlightjs.org/" target="_blank" rel="external">Source</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span></div><div class="line">    <span class="string">r'''A docstring'''</span></div><div class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></div><div class="line">        <span class="keyword">print</span> <span class="string">'Gre\'ater'</span></div><div class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span> + <span class="number">0b10l</span>) <span class="keyword">or</span> <span class="keyword">None</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter</span></div><div class="line"><span class="meta">... </span>prompt'''</div><div class="line"></div></pre></td></tr></table></figure>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">[1]</span><span style="display: inline-block; vertical-align: top;">basic footnote content</span><a href="#fnref:1"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">[2]</span><span style="display: inline-block; vertical-align: top;">paragraph</span><a href="#fnref:2"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">[3]</span><span style="display: inline-block; vertical-align: top;">footnote content with some <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a></span><a href="#fnref:3"> ↩</a></li></ol></div></div>]]></content>
+      
+        <categories>
+            
+            <category> web </category>
+            
+            <category> blog </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> markdown </tag>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
     </entry>
     
   

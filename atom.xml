@@ -95,7 +95,7 @@ tools
     
     <summary type="html">
     
-      &lt;p&gt;Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I’ll give a detailed description on how to do this. Note that we need to &lt;a href=&quot;https://source.android.com/source/requirements.html&quot;&gt;build the Android source&lt;/a&gt; beforehand.&lt;/p&gt;
+      &lt;p&gt;Although the fact that AOSP already provides IDE-level developing support, the configuration process may still confuse us. In this article, I’ll give a detailed description on how to do this. Note that we need to &lt;a href=&quot;https://source.android.com/source/requirements.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;build the Android source&lt;/a&gt; beforehand.&lt;/p&gt;
     
     </summary>
     
@@ -171,7 +171,7 @@ tools
     
     <summary type="html">
     
-      &lt;p&gt;Hello &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;!&lt;/p&gt;
+      &lt;p&gt;Hello &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I’m back again, since more than a year ago, I just started writing blog, and after I tried several times, I gave up. The reason is that I’m not ready, I’m just curious for the web things. This time, I’ll begin write something that deserve to write, from machine learning to software developing and maybe some thoughts on my research.&lt;/p&gt;
 &lt;p&gt;This first post is mainly for testing various features.&lt;br&gt;
     
