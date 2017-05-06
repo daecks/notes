@@ -2,6 +2,6 @@
 ==============
 # About
 
-This is the Hexo configurations repo for site https://notes.cscao.com//
+This is the Hexo configurations repo for site https://notes.cscao.com/
 
 
